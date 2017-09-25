@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_movie"
+            android:icon="@drawable/drawer_movie_icon"
+            android:title="@string/drawer_title_movie" />
+        <item
+            android:id="@+id/nav_book"
+            android:icon="@drawable/drawer_book_icon"
+            android:title="@string/drawer_title_book" />
+        <item
+            android:id="@+id/nav_soap"
+            android:icon="@drawable/drawer_soap_icon"
+            android:title="@string/drawer_title_soap" />
+        <item
+            android:id="@+id/nav_city"
+            android:icon="@drawable/drawer_city_icon"
+            android:title="@string/drawer_title_city" />
+
+        <item
+            android:id="@+id/nav_music"
+            android:icon="@drawable/drawer_music_icon"
+            android:title="@string/drawer_title_music" />
+        <item
+            android:id="@+id/nav_marker"
+            android:icon="@drawable/drawer_market_icon"
+            android:title="@string/drawer_title_market" />
+    </group>
+
+    <item android:title="@string/drawer_title_setting">
+        <menu>
+            <item
+                android:id="@+id/nav_acount"
+                android:title="@string/drawer_title_account" />
+            <item
+                android:id="@+id/nav_weather"
+                android:title="@string/drawer_title_weather" />
+        </menu>
+    </item>
+
+</menu>

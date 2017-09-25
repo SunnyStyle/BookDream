@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/book_china_literature_layout"
+            layout="@layout/book_china_literature_layout">
+
+        </include>
+
+        <include
+            android:id="@+id/book_biography_layout"
+            layout="@layout/book_biography_layout">
+
+        </include>
+
+        <include
+            android:id="@+id/book_children_layout"
+            layout="@layout/book_children_layout">
+
+        </include>
+
+        <include
+            android:id="@+id/book_message_layout"
+            layout="@layout/book_china_literature_layout">
+
+        </include>
+
+        <include
+            android:id="@+id/book_most_attention_layout"
+            layout="@layout/book_biography_layout">
+
+        </include>
+
+        <include
+            android:id="@+id/book_dou_layout"
+            layout="@layout/book_biography_layout">
+
+        </include>
+
+
+
+
+    </ScrollView>
+
+</layout>

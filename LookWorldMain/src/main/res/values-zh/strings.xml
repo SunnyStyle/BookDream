@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">书心愿</string>
+
+    <string name="navigation_drawer_open" translatable="false">打开抽屉</string>
+    <string name="navigation_drawer_close" translatable="false">关闭抽屉</string>
+
+    <string name="title_home">首页</string>
+    <string name="title_book_news_world">书影闻</string>
+    <string name="title_discovery">发现</string>
+    <string name="title_notifications">赛事</string>
+
+    <string name="action_settings" translatable="false">设置</string>
+    <string name="app_drawer_title" translatable="false">豆瓣家</string>
+    <string name="drawer_title_movie" translatable="false">电影</string>
+    <string name="drawer_title_soap" translatable="false">电视剧</string>
+    <string name="drawer_title_book" translatable="false">书籍</string>
+    <string name="drawer_title_city" translatable="false">同城</string>
+    <string name="drawer_title_music" translatable="false">音乐</string>
+    <string name="drawer_title_market" translatable="false">集市</string>
+    <string name="drawer_title_setting" translatable="false">设置</string>
+    <string name="drawer_title_account" translatable="false">账户</string>
+    <string name="drawer_title_weather" translatable="false">天气</string>
+    <string name="app_toolbar_title" translatable="false">书影世界</string>
+
+    <string name="movie_title1">热门电影</string>
+    <string name="movie_title2">近期上映</string>
+    <string name="movie_title3">北美票房榜</string>
+
+    <string name="more_with_icon">更多 &gt; </string>
+
+</resources>

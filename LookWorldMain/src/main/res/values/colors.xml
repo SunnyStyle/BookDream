@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#efefef</color>
+    <color name="colorPrimaryDark">#606060</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="drawable_background_color">#ececec</color>
+    <color name="top_tab_text_color">#949393</color>
+    <color name="top_tab_text_color_selector">#3ed178</color>
+    <color name="main_tab_checked">#793802</color>
+    <color name="main_tab_unchecked">#873944</color>
+</resources>

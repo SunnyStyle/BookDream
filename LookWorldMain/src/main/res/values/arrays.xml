@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tab_title">
+        <item>@string/drawer_title_movie</item>
+        <item>@string/drawer_title_book</item>
+        <item>@string/drawer_title_soap</item>
+        <item>@string/drawer_title_city</item>
+        <item>@string/drawer_title_music</item>
+        <item>@string/drawer_title_market</item>
+    </string-array>
+
+    <string-array name="movie_title">
+        <item>热门电影</item>
+        <item>近期上映</item>
+        <item>北美票房榜</item>
+    </string-array>
+</resources>
