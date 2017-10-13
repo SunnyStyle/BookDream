@@ -3,10 +3,6 @@ package com.enjoylife.lookworld.ui.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-
-import com.enjoylife.lookworld.ui.baseView.BaseFragment;
-import com.enjoylife.lookworld.ui.fragment.HomeFragment;
 
 import java.util.ArrayList;
 import java.util.List;

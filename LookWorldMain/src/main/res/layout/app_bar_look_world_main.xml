@@ -9,13 +9,21 @@
         android:orientation="vertical"
         tools:context="com.enjoylife.bookdream.com.enjoylife.lookworld.ui.activity.BookDreamMainActivity">
 
+        <!--状态栏-->
+        <View
+            android:id="@+id/view_status"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:visibility="gone"
+            android:background="@color/colorTheme" />
+
         <FrameLayout
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
 
-            <android.support.design.widget.AppBarLayout
+            <!--<android.support.design.widget.AppBarLayout
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:theme="@style/AppTheme.AppBarOverlay">
@@ -30,15 +38,15 @@
                 </android.support.v7.widget.Toolbar>
 
 
-            </android.support.design.widget.AppBarLayout>
+            </android.support.design.widget.AppBarLayout>-->
 
-            <android.support.v4.view.ViewPager
+            <com.enjoylife.lookworld.ui.view.NotScrollViewpager
                 android:id="@+id/app_main_activity_vpager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            </android.support.v4.view.ViewPager>
+            </com.enjoylife.lookworld.ui.view.NotScrollViewpager>
 
         </FrameLayout>
 
@@ -50,7 +58,6 @@
             android:layout_gravity="bottom"
             android:background="?android:attr/windowBackground"
             app:menu="@menu/navigation"
-            app:itemIconTint="@drawable/bottom_navigation_selector"
             app:itemTextColor="@drawable/bottom_navigation_selector"/>
 
     </LinearLayout>

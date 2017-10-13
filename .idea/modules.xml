@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BookDream.iml" filepath="$PROJECT_DIR$/BookDream.iml" />
       <module fileurl="file://$PROJECT_DIR$/LookWorldMain/LookWorldMain.iml" filepath="$PROJECT_DIR$/LookWorldMain/LookWorldMain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bottomactivity/bottomactivity.iml" filepath="$PROJECT_DIR$/bottomactivity/bottomactivity.iml" />
-      <module fileurl="file://$PROJECT_DIR$/scrollactivity/scrollactivity.iml" filepath="$PROJECT_DIR$/scrollactivity/scrollactivity.iml" />
     </modules>
   </component>
 </project>

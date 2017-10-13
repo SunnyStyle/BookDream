@@ -3,4 +3,16 @@
     <declare-styleable name="SingleBall">
         <attr name="single_ball_color" format="color"/>
     </declare-styleable>
+
+    <declare-styleable name="LwToolbar">
+        <attr name="isshow_toolbar_search" format="boolean"/>
+        <attr name="isfragment_home" format="boolean"/>
+        <attr name="toolbar_search_type" format="string|reference"/>
+        <attr name="is_settings" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MovieTitleLayout">
+        <attr name="title_name" format="string|reference"/>
+        <attr name="movie_sum" format="string|reference"/>
+    </declare-styleable>
 </resources>

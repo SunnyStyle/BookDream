@@ -1,5 +1,6 @@
 package com.enjoylife.lookworld.ui.activity;
 
+import android.app.Application;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -17,15 +18,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.enjoylife.bookdream.R;
 import com.enjoylife.bookdream.databinding.ActivityLookWorldMainBinding;
 import com.enjoylife.lookworld.application.Log;
+import com.enjoylife.lookworld.application.MyApplication;
 import com.enjoylife.lookworld.ui.adapter.MainViewPagerAdapter;
 import com.enjoylife.lookworld.ui.fragment.BookNewsFragment;
 import com.enjoylife.lookworld.ui.fragment.DiscoveryFragment;
 import com.enjoylife.lookworld.ui.fragment.HomeFragment;
+import com.enjoylife.lookworld.ui.fragment.HomeMineFragment;
 import com.enjoylife.lookworld.ui.fragment.NotifycationFragment;
+import com.enjoylife.lookworld.ui.view.NotScrollViewpager;
+import com.enjoylife.lookworld.ui.view.statusbar.StatusBarUtil;
+import com.enjoylife.lookworld.ui.view.statusbar.StatusBarUtilFont;
+import com.enjoylife.lookworld.utils.CommonUtils;
+import com.enjoylife.lookworld.utils.ConstantUtils;
 
 import java.lang.reflect.Field;
 
@@ -33,56 +42,80 @@ public class LookWorldMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Log log = Log.YLog();
 
-    ActivityLookWorldMainBinding activityLookWorldMainBinding;
-    BottomNavigationView bottomNavigationView;
-    ViewPager viewpager;
+    private ActivityLookWorldMainBinding activityLookWorldMainBinding;
+    private BottomNavigationView bottomNavigationView;
+    private NotScrollViewpager viewpager;
+    public DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         activityLookWorldMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_look_world_main);
-        Toolbar toolbar = activityLookWorldMainBinding.appBarMain.toolbar;
+
+        initStatusView();
+
+        initToolbar();
+        initDrawerlayout();
+        initNavigationView();
+
+        initBottomView();
+
+        setupViewpager();
+        //StatusBarUtil.setColorNoTranslucentForDrawerLayout(LookWorldMainActivity.this, drawer,
+        //getResources().getColor(R.color.colorTheme));
+
+    }
+
+    private void initBottomView() {
+        bottomNavigationView = activityLookWorldMainBinding.appBarMain.bottomNavigation;
+        disableShiftMode(bottomNavigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavigationItemListener);
+    }
+
+    private void initView() {
+
+    }
+
+    private void initNavigationView() {
+        NavigationView navigationView = activityLookWorldMainBinding.navView;
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
+    }
+
+    private void initDrawerlayout() {
+        drawer = activityLookWorldMainBinding.drawerLayout;
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, null, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+    }
+
+    private void initToolbar() {
+        /*Toolbar toolbar = activityLookWorldMainBinding.appBarMain.toolbar;
         setSupportActionBar(toolbar);
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         if (actionBar != null){
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setDisplayShowTitleEnabled(false);
-        }
+        }*/
+    }
 
-        DrawerLayout drawer = activityLookWorldMainBinding.drawerLayout;
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = activityLookWorldMainBinding.navView;
-        navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setItemIconTintList(null);
-
-        bottomNavigationView = activityLookWorldMainBinding.appBarMain.bottomNavigation;
-        disableShiftMode(bottomNavigationView);
-        bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavigationItemListener);
-
-        viewpager = activityLookWorldMainBinding.appBarMain.appMainActivityVpager;
-        setupViewpager();
-
+    private void initStatusView() {
+        ViewGroup.LayoutParams layoutParams = activityLookWorldMainBinding.appBarMain.viewStatus.getLayoutParams();
+        layoutParams.height = StatusBarUtil.getStatusBarHeight(this);
+        activityLookWorldMainBinding.appBarMain.viewStatus.setLayoutParams(layoutParams);
     }
 
     private void setupViewpager() {
+        viewpager = activityLookWorldMainBinding.appBarMain.appMainActivityVpager;
+        viewpager.setNoScroll(true);
         MainViewPagerAdapter viewMainAdapter = new MainViewPagerAdapter(getSupportFragmentManager());
-        viewMainAdapter.addFragment(new HomeFragment());
+        viewMainAdapter.addFragment(new HomeMineFragment());
         viewMainAdapter.addFragment(new BookNewsFragment());
         viewMainAdapter.addFragment(new DiscoveryFragment());
         viewMainAdapter.addFragment(new NotifycationFragment());
         viewpager.setAdapter(viewMainAdapter);
-        //禁止ViewPager 滑动
-        viewpager.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                return true;
-            }
-        });
     }
 
     BottomNavigationView.OnNavigationItemSelectedListener bottomNavigationItemListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -92,15 +125,25 @@ public class LookWorldMainActivity extends AppCompatActivity
             log.d("navigation clicked");
             switch (itemId){
                 case R.id.navigation_home:
+                    ConstantUtils.toolbarSearchType = 0;
+                    StatusBarUtilFont.StatusBarLightMode(LookWorldMainActivity.this, false);
+                    StatusBarUtilFont.setStatusBarColor(LookWorldMainActivity.this, getResources().getColor(R.color.colorPrimary_home), false);
                     viewpager.setCurrentItem(0);
                     break;
                 case R.id.navigation_book_world:
+                    ConstantUtils.toolbarSearchType = 1;
+                    StatusBarUtilFont.setStatusBarColor(LookWorldMainActivity.this, getResources().getColor(R.color.colorPrimary), false);
+                    StatusBarUtilFont.StatusBarLightMode(LookWorldMainActivity.this, true);
                     viewpager.setCurrentItem(1);
                     break;
                 case R.id.navigation_discovery:
+                    ConstantUtils.toolbarSearchType = 2;
+                    StatusBarUtilFont.StatusBarLightMode(LookWorldMainActivity.this, true);
                     viewpager.setCurrentItem(2);
                     break;
                 case R.id.navigation_notifications:
+                    ConstantUtils.toolbarSearchType = 3;
+                    StatusBarUtilFont.StatusBarLightMode(LookWorldMainActivity.this, true);
                     viewpager.setCurrentItem(3);
                     break;
             }

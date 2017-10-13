@@ -3,6 +3,7 @@ package com.enjoylife.lookworld.model.entities.usBoxEntities;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
  * Created by wangfang on 2017/9/21.
  */
 
-public class UsBoxEntity {
+public class UsBoxEntity implements Serializable {
 
     @SerializedName("data")
     @Expose

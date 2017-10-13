@@ -7,6 +7,7 @@ import com.enjoylife.lookworld.model.entities.usBoxEntities.UsBoxEntity;
  * Created by wangfang on 2017/9/21.
  */
 
-public interface DataView extends MvpView{
-    void loadData(UsBoxEntity usBoxEntity, Movieinfo comingSoon, Movieinfo inThreatEntity);
+public interface IMovieLoadData extends MvpView{
+    void loadData(Movieinfo top250,Movieinfo inThreatEntity,UsBoxEntity usBoxEntity, Movieinfo comingSoon);
+
 }

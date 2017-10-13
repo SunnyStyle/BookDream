@@ -1,6 +1,7 @@
-package com.enjoylife.lookworld.application;
+package com.enjoylife.lookworld.http.retrofit;
 
 
+import com.enjoylife.lookworld.application.Log;
 import com.enjoylife.lookworld.model.cofig.IPAddress;
 
 import java.io.IOException;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">书心愿</string>
+    <string name="app_name" translatable="false">柚子读物</string>
 
     <string name="navigation_drawer_open" translatable="false">打开抽屉</string>
     <string name="navigation_drawer_close" translatable="false">关闭抽屉</string>
@@ -23,10 +23,25 @@
     <string name="drawer_title_weather" translatable="false">天气</string>
     <string name="app_toolbar_title" translatable="false">书影世界</string>
 
-    <string name="movie_title1">热门电影</string>
-    <string name="movie_title2">近期上映</string>
-    <string name="movie_title3">北美票房榜</string>
+    <string name="movie_title1">豆瓣 Top250</string>
+    <string name="movie_title2">影院热映</string>
+    <string name="movie_title3">院线即将上映</string>
+    <string name="movie_title4">豆瓣热门</string>
+    <string name="movie_title5">你可能感兴趣的</string>
 
-    <string name="more_with_icon">更多 &gt; </string>
+    <string name="more_with_icon">全部 %1$s</string>
+
+    <string name="movie_buttonlayout_search_string">找电影</string>
+    <string name="movie_buttonlayout_search_type_string">治愈／悬疑／冷门佳片</string>
+    <string name="movie_buttonlayout_mine_string">我的电影</string>
+    <string name="movie_buttonlayout_mine_num_string"> %1$s 部</string>
+
+    <string name="movie_is_hot_string">正在热议</string>
+
+    <string name="movie_no_has_rating_string">暂无评分</string>
+
+    <string name="movie_list_director">导演：</string>
+
+    <string name="movie_list_avastor">演员：</string>
 
 </resources>

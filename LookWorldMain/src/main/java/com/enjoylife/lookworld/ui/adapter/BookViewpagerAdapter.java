@@ -4,7 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.enjoylife.lookworld.ui.fragment.MovieFragment;
+import com.enjoylife.lookworld.ui.baseView.BaseFragment;
+import com.enjoylife.lookworld.ui.fragment.bookmovienews.MovieFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ public class BookViewpagerAdapter extends FragmentPagerAdapter{
         super(fm);
     }
 
-    public void addFragments(MovieFragment fragment, String titles){
+    public void addFragments(BaseFragment fragment, String titles){
         fragmentList.add(fragment);
         tabTitles.add(titles);
     }

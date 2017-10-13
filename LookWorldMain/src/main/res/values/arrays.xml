@@ -10,8 +10,11 @@
     </string-array>
 
     <string-array name="movie_title">
-        <item>热门电影</item>
-        <item>近期上映</item>
-        <item>北美票房榜</item>
+        <item>@string/movie_title1</item>
+        <item>@string/movie_title2</item>
+        <item>@string/movie_title3</item>
+        <item>@string/movie_title4</item>
+        <item>@string/movie_title5</item>
+
     </string-array>
 </resources>

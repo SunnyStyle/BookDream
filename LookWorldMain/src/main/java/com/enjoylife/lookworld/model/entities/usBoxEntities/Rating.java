@@ -3,11 +3,13 @@ package com.enjoylife.lookworld.model.entities.usBoxEntities;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by wangfang on 2017/9/22.
  */
 
-public class Rating {
+public class Rating implements Serializable {
     @SerializedName("max")
     @Expose
     private Integer max;

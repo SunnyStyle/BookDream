@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#efefef</color>
-    <color name="colorPrimaryDark">#606060</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary_home">#4ca14e</color>
+    <color name="colorPrimaryDark_home">#4ca14e</color>
+    <color name="colorPrimary">#e1e1e1</color>
+    <color name="colorPrimaryDark">#e1e1e1</color>
+    <color name="colorAccent">#4ca14e</color>
+    <color name="home_bg_color">#f1f1f1</color>
     <color name="drawable_background_color">#ececec</color>
-    <color name="top_tab_text_color">#949393</color>
-    <color name="top_tab_text_color_selector">#3ed178</color>
-    <color name="main_tab_checked">#793802</color>
-    <color name="main_tab_unchecked">#873944</color>
+    <color name="top_tab_text_color">#494949</color>
+    <color name="top_tab_text_color_selector">#000000</color>
+    <color name="main_tab_checked">@color/top_tab_text_color_selector</color>
+    <color name="main_tab_unchecked">@color/top_tab_text_color</color>
+
+    <color name="home_toolbar_color">#4ca14e</color>
+    <color name="colorTheme">#4ca14e</color>
+
+    <!--页面背景的颜色-->
+    <color name="colorPageBg">#f2f4f5</color>
+    <color name="colorTabText">#cbcccc</color>
+    <!--正文文字颜色-->
+    <color name="colorContent">#ff333333</color>
+
+    <color name="colorWhite">#ffffffff</color>
+
+    <!--水波纹或5.0以下选择器颜色-->
+    <color name="tabBackground">#777D7D7D</color>
+    <!--item的水波纹颜色-->
+    <color name="itemBackground">#DD7D7D7D</color>
+    <!--item的5.0一下版本选择器颜色-->
+    <color name="itemLowBackground">#d9d9d9</color>
+    <color name="book_new_title_line_color">#77d7d7d7</color>
+
+    <color name="movie_big_rv_text_color">#7b7b7b</color>
+
+    <color name="movie_is_hot_text_color">#e95858</color>
 </resources>

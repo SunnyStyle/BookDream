@@ -3,11 +3,13 @@ package com.enjoylife.lookworld.model.entities.usBoxEntities;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by wangfang on 2017/9/21.
  */
 
-public class Image {
+public class Image implements Serializable {
     @SerializedName("small")
     @Expose
     private String small;

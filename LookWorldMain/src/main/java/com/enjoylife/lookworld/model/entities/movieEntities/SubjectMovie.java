@@ -3,6 +3,7 @@ package com.enjoylife.lookworld.model.entities.movieEntities;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
  * Created by wangfang on 2017/9/21.
  */
 
-public class SubjectMovie {
+public class SubjectMovie implements Serializable {
     @SerializedName("rating")
     @Expose
     private Rating rating;

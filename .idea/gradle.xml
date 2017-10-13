@@ -9,8 +9,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/LookWorldMain" />
-            <option value="$PROJECT_DIR$/bottomactivity" />
-            <option value="$PROJECT_DIR$/scrollactivity" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

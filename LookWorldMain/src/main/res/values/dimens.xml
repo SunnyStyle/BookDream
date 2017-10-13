@@ -6,7 +6,7 @@
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="design_navigation_icon_size" tools:override="true">30dp</dimen>
-    <dimen name="tab_title_size">20sp</dimen>
+    <dimen name="tab_title_size">16sp</dimen>
     <dimen name="tab_selected_height">2dp</dimen>
     <dimen name="movie_intro">18sp</dimen>
     <dimen name="movie_more">14sp</dimen>
@@ -20,4 +20,21 @@
 
     <dimen name="movie_pic_height">140dp</dimen>
     <dimen name="movie_pic_width">100dp</dimen>
+    <dimen name="toolbar_height">45dp</dimen>
+
+    <dimen name="movie_left_margin">5dp</dimen>
+    <dimen name="movie_big_rv_text_size">12sp</dimen>
+
+    <!--电影详情图片的宽高-->
+    <dimen name="movie_detail_width">125dp</dimen>
+    <dimen name="movie_detail_height">165dp</dimen>
+    <!--书籍详情图片的宽高-->
+    <dimen name="book_detail_width">120dp</dimen>
+    <dimen name="book_detail_height">165dp</dimen>
+
+    <dimen name="movie_list_title_size">18sp</dimen>
+
+    <dimen name="home_rv_item_size">116dp</dimen>
+
+
 </resources>
